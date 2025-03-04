@@ -1,4 +1,4 @@
-**# CTF Aliases
+# CTF Aliases
 
 This project provides a simple way to manage and access environment variables for your CTF (Capture The Flag) challenges on your Linux system using aliases and functions.
 
@@ -7,7 +7,7 @@ This project provides a simple way to manage and access environment variables fo
 - Create aliases to easily reference these variables in the terminal.
 - Functions to retrieve the values of environment variables.
 
-## Installation
+# Installation
 
 To get started, clone this repository and set up the aliases on your machine.
 
