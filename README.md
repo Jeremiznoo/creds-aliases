@@ -1,6 +1,6 @@
 # CTF Aliases
 
-This project provides a simple way to manage and access environment variables related to CTF (Capture The Flag) challenges using aliases and functions.
+This project provides a simple way to manage and access environment variables on your linux system for your CTF (Capture The Flag) challenges using aliases and functions.
 
 ## Features
 
@@ -8,17 +8,38 @@ This project provides a simple way to manage and access environment variables re
 - Create aliases to easily reference these variables in the terminal.
 - Functions to retrieve the values of environment variables.
 
-# Usage
+# Installation
 
-To use this project you have to know your shell with the command : 
+First, clone the repo:
+
+```bash
+git clone https://github.com/Jeremiznoo/CTF-zsh-aliases/
+```
+
+cd into the repo
+
+```
+cd CTF-aliases/
+```
+
+To use this project you have to know your shell with the command: 
 
 ```bash
 echo $SHELL
 ```
-If the result is `bash` edit the ~/.bashrc files and add the lines at the bottom
 
-If the result is `zsh` edit the ~/.zshrc files and add the lines at the bottom
+If the result is `bash`:
 
+```bash
+cat aliases >> ~/.bashrc
+```
+
+If the result is `zsh`:
+
+```bash
+cat aliases >> ~/.zshrc
+```
+# Usage 
 ## Environment Variables
 
 The following environment variables are defined:
