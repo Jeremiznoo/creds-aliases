@@ -81,11 +81,11 @@ The following environment variables are set up:
 
 The following aliases are created for quick access to the environment variables:
 
-- `ip`: Resolves to the `IP` environment variable.
-- `user`: Resolves to the `USER` environment variable.
-- `pass`: Resolves to the `PASSWORD` environment variable.
-- `domain`: Resolves to the `DOMAIN` environment variable.
-- `target`: Resolves to the `TARGET` environment variable.
+- `$IP`: Resolves to the `IP` environment variable.
+- `$USER`: Resolves to the `USER` environment variable.
+- `$PASSWORD`: Resolves to the `PASSWORD` environment variable.
+- `$DOMAIN`: Resolves to the `DOMAIN` environment variable.
+- `$TARGET`: Resolves to the `TARGET` environment variable.
 
 Example:
 
