@@ -1,21 +1,44 @@
-# CTF aliases
+# Source the CTF environment variables if the file exists
+if [ -f "$HOME/.ctf_env_vars" ]; then
+  source "$HOME/.ctf_env_vars"
+fi
 
-export IP=127.0.0.1
-export TARGET=target.com
-export USER=username
-export PASSWORD=password
-export DOMAIN=domain.com
+# Function to update the IP address
+set_ip() {
+  export IP=$1
+  echo "IP updated to $IP"
+  # Save the new value to ~/.ctf_env_vars permanently
+  sed -i "s/^export IP=.*/export IP=$IP/" ~/.ctf_env_vars
+}
 
-# Aliases for environment variables
-alias ip='$IP'
-alias user='$USER'
-alias pass='$PASSWORD'
-alias domain='$DOMAIN'
-alias target='$TARGET'
+# Function to update the target
+set_target() {
+  export TARGET=$1
+  echo "TARGET updated to $TARGET"
+  # Save the new value to ~/.ctf_env_vars permanently
+  sed -i "s/^export TARGET=.*/export TARGET=$TARGET/" ~/.ctf_env_vars
+}
 
-# Functions to get the values of environment variables
-getip() { echo $IP; }
-getuser() { echo $USER; }
-getpass() { echo $PASSWORD; }
-getdomain() { echo $DOMAIN; }
-gettarget() { echo $TARGET; }
+# Function to update the username
+set_user() {
+  export USER=$1
+  echo "USER updated to $USER"
+  # Save the new value to ~/.ctf_env_vars permanently
+  sed -i "s/^export USER=.*/export USER=$USER/" ~/.ctf_env_vars
+}
+
+# Function to update the password
+set_password() {
+  export PASSWORD=$1
+  echo "PASSWORD updated to $PASSWORD"
+  # Save the new value to ~/.ctf_env_vars permanently
+  sed -i "s/^export PASSWORD=.*/export PASSWORD=$PASSWORD/" ~/.ctf_env_vars
+}
+
+# Function to update the domain
+set_domain() {
+  export DOMAIN=$1
+  echo "DOMAIN updated to $DOMAIN"
+  # Save the new value to ~/.ctf_env_vars permanently
+  sed -i "s/^export DOMAIN=.*/export DOMAIN=$DOMAIN/" ~/.ctf_env_vars
+}
