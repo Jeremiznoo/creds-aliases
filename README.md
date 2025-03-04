@@ -50,6 +50,11 @@ cat aliases >> ~/.bashrc
 ```bash
 cat aliases >> ~/.zshrc
 ```
+Then,copy the env file
+
+```bash
+cp .ctf_env_vars ~/
+```
 
 ### 5. Apply the changes
 
