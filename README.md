@@ -90,10 +90,10 @@ The following aliases are created for quick access to the environment variables:
 Example:
 
 ```bash
-$ ip
+$ echo $IP
 127.0.0.1
 
-$ target
+$ echo $TARGET
 target.com
 ```
 
