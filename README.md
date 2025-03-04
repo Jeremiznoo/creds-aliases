@@ -1,6 +1,3 @@
-Here’s the complete `README.md` content in Markdown format:
-
-```md
 # CTF Aliases
 
 This project provides a simple way to manage and access environment variables for your CTF (Capture The Flag) challenges on your Linux system using aliases and functions.
@@ -9,8 +6,6 @@ This project provides a simple way to manage and access environment variables fo
 - Set up common environment variables like IP, target, username, password, and domain.
 - Create aliases to easily reference these variables in the terminal.
 - Functions to retrieve the values of environment variables.
-
----
 
 ## Installation
 
