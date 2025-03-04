@@ -1,3 +1,5 @@
+## Made By https://github.com/Jeremiznoo
+
 # Source the CTF environment variables if the file exists
 if [ -f "$HOME/.ctf_env_vars" ]; then
   source "$HOME/.ctf_env_vars"
