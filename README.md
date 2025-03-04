@@ -13,7 +13,7 @@ This project provides a simple way to manage and access environment variables on
 First, clone the repo:
 
 ```bash
-git clone https://github.com/Jeremiznoo/CTF-zsh-aliases/
+git clone https://github.com/Jeremiznoo/CTF-aliases/
 ```
 
 cd into the repo
