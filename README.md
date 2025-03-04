@@ -1,4 +1,4 @@
-# CTF Aliases
+**# CTF Aliases
 
 This project provides a simple way to manage and access environment variables for your CTF (Capture The Flag) challenges on your Linux system using aliases and functions.
 
@@ -110,9 +110,10 @@ The following functions can be used to retrieve the values of the environment va
 Example:
 
 ```bash
-$ getip
+$ echo $IP
 127.0.0.1
 
-$ gettarget
+$ echo $TARGET
 target.com
 ```
+**
