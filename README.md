@@ -111,5 +111,5 @@ For example, you can run:
 ```bash
 $ nmap $IP
 $ curl $TARGET
-
+```
 And the changes remain permanent even if you quit or open a new tab
