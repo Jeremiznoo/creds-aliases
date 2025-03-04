@@ -1,6 +1,7 @@
 # CTF Aliases
 
-This project provides a simple way to manage and access environment variables for your CTF (Capture The Flag) challenges on your Linux system using aliases and functions.
+This project simplifies managing and accessing environment variables on your Linux system using aliases and functions. It makes changes permanent, so you don't have to repeatedly set variables like IP, target, username etc... 
+Ideal for CTF challenges, it saves time by letting you quickly reference key variables without re-entering them.
 
 ## Features
 - Set up common environment variables like IP, target, username, password, and domain.
@@ -55,11 +56,11 @@ cat aliases >> ~/.zshrc
 Once you've added the aliases to the correct shell configuration file, apply the changes by running:
 
 ```bash
-source ~/.bashrc   # for Bash users
+source ~/.bashrc
 ```
-or
+or for zsh users
 ```bash
-source ~/.zshrc    # for Zsh users
+source ~/.zshrc    # 
 ```
 
 ---
@@ -87,33 +88,61 @@ The following aliases are created for quick access to the environment variables:
 - `$DOMAIN`: Resolves to the `DOMAIN` environment variable.
 - `$TARGET`: Resolves to the `TARGET` environment variable.
 
-Example:
+# Example:
 
-```bash
 $ echo $IP
 127.0.0.1
 
 $ echo $TARGET
 target.com
-```
 
-### Functions
+# Now if you want to change the variable:
 
-The following functions can be used to retrieve the values of the environment variables:
+$ set_ip 192.168.1.1
+IP updated to 192.168.1.1
 
-- `getip()`: Returns the value of the `IP` variable.
-- `getuser()`: Returns the value of the `USER` variable.
-- `getpass()`: Returns the value of the `PASSWORD` variable.
-- `getdomain()`: Returns the value of the `DOMAIN` variable.
-- `gettarget()`: Returns the value of the `TARGET` variable.
+$ set_target newtarget.com
+TARGET updated to newtarget.com
 
-Example:
+# Verify the updated values:
 
-```bash
+$ echo $IP
+192.168.1.1
+
+$ echo $TARGET
+newtarget.com
+
 $ echo $IP
 127.0.0.1
 
 $ echo $TARGET
 target.com
-```
+
+# Now if you want to change the variable:
+
+$ set_ip 192.168.1.1
+IP updated to 192.168.1.1
+
+$ set_target newtarget.com
+TARGET updated to newtarget.com
+
+# Verify the updated values:
+
+$ echo $IP
+192.168.1.1
+
+$ echo $TARGET
+newtarget.com
+
+## Now, you can, for example, enumerate your target without needing to remember or type the IP address every time:
+
+**Before**
+$ nmap 192.168.1.1
+
+**After**
+
+$ set_ip 192.168.1.1
+
+$ nmap $IP
+
 **
