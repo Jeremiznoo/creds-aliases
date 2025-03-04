@@ -1,117 +1,123 @@
-CTF Aliases Setup Guide
-This page provides instructions for setting up and using the CTF Aliases project. With this tool, you can easily manage common environment variables used during Capture The Flag (CTF) challenges.
+Here’s the complete `README.md` content in Markdown format:
 
-Prerequisites
-Before setting up, ensure that you have the following installed:
+```md
+# CTF Aliases
 
-A Linux-based operating system (Ubuntu, Kali Linux, etc.)
-A terminal application (bash, zsh, etc.)
-Git (to clone the repository)
-To check if Git is installed, run:
+This project provides a simple way to manage and access environment variables for your CTF (Capture The Flag) challenges on your Linux system using aliases and functions.
 
-bash
-Copy
-git --version
-If Git is not installed, you can install it with:
+## Features
+- Set up common environment variables like IP, target, username, password, and domain.
+- Create aliases to easily reference these variables in the terminal.
+- Functions to retrieve the values of environment variables.
 
-bash
-Copy
-sudo apt-get install git
-Installation
-Step 1: Clone the Repository
-Start by cloning the CTF Aliases repository from GitHub:
+---
 
-bash
-Copy
+## Installation
+
+To get started, clone this repository and set up the aliases on your machine.
+
+### 1. Clone the repository
+
+Open your terminal and run the following command to clone the repository:
+
+```bash
 git clone https://github.com/Jeremiznoo/CTF-aliases/
-Step 2: Navigate to the Project Directory
-Once the repository is cloned, navigate to the project directory:
+```
 
-bash
-Copy
+### 2. Navigate into the cloned directory
+
+```bash
 cd CTF-aliases/
-Step 3: Determine Your Shell
-Before adding the aliases, you need to determine which shell you are using. Run the following command:
+```
 
-bash
-Copy
+### 3. Check which shell you're using
+
+You need to know which shell you're using to configure the aliases correctly. Run this command:
+
+```bash
 echo $SHELL
-This will output the path to your shell. The most common results are:
+```
 
-/bin/bash (for Bash users)
-/bin/zsh (for Zsh users)
-Step 4: Add Aliases to Your Shell Configuration File
-Now, you need to add the aliases and environment variables to your shell configuration file. Depending on your shell, use the following commands:
+Depending on the result, you will add the aliases to different configuration files.
 
-For Bash users:
-If your output from the echo $SHELL command is /bin/bash, append the aliases to your ~/.bashrc file by running:
+- If the result shows `/bin/bash`, you're using **Bash**.
+- If the result shows `/bin/zsh`, you're using **Zsh**.
 
-bash
-Copy
+### 4. Add the aliases to your shell configuration file
+
+#### For **Bash** users:
+```bash
 cat aliases >> ~/.bashrc
-For Zsh users:
-If you are using Zsh (output of echo $SHELL is /bin/zsh), add the aliases to your ~/.zshrc file by running:
+```
 
-bash
-Copy
+#### For **Zsh** users:
+```bash
 cat aliases >> ~/.zshrc
-Step 5: Reload Your Shell Configuration
-Once you've added the aliases to your shell configuration file, reload the configuration by running:
+```
 
-For Bash:
-bash
-Copy
-source ~/.bashrc
-For Zsh:
-bash
-Copy
-source ~/.zshrc
-This will apply the changes, and you'll be able to use the aliases and functions right away in your terminal.
+### 5. Apply the changes
 
-Usage
-Setting Up Environment Variables
-By default, the following environment variables are configured:
+Once you've added the aliases to the correct shell configuration file, apply the changes by running:
 
-IP: The IP address of the target.
-TARGET: The target domain or website.
-USER: The username for authentication.
-PASSWORD: The password for authentication.
-DOMAIN: The domain name for the target.
-You can set these variables to any values relevant to your CTF challenge.
+```bash
+source ~/.bashrc   # for Bash users
+```
+or
+```bash
+source ~/.zshrc    # for Zsh users
+```
 
-Accessing Environment Variables
-Once the setup is complete, you can easily reference these environment variables using the following aliases:
+---
 
-ip: Returns the value of IP.
-user: Returns the value of USER.
-pass: Returns the value of PASSWORD.
-domain: Returns the value of DOMAIN.
-target: Returns the value of TARGET.
-Functions to Retrieve Values
-In addition to the aliases, the following functions are available for retrieving the environment variable values:
+## Usage
 
-getip: Outputs the value of IP.
-getuser: Outputs the value of USER.
-getpass: Outputs the value of PASSWORD.
-getdomain: Outputs the value of DOMAIN.
-gettarget: Outputs the value of TARGET.
-Example Usage
-Here’s how you can use the environment variables and aliases in a typical CTF workflow:
+Once the setup is complete, you'll be able to use the predefined aliases and functions to quickly access the environment variables for your CTF challenges.
 
-bash
-Copy
-# Set the variables
-export IP=192.168.1.100
-export TARGET=targetsite.com
-export USER=admin
-export PASSWORD=ctfpassword
-export DOMAIN=example.com
+### Environment Variables
+The following environment variables are set up:
 
-# Use the aliases to check the values
-echo $ip  # Outputs: 192.168.1.100
-echo $user  # Outputs: admin
+- `IP`: The IP address of the target.
+- `TARGET`: The target domain or website.
+- `USER`: The username for authentication.
+- `PASSWORD`: The password for authentication.
+- `DOMAIN`: The domain name for the target.
 
-# Use the functions to check the values
-gettarget  # Outputs: targetsite.com
-getpass    # Outputs: ctfpassword
-These variables and aliases simplify the management of target details, saving you time during your CTF challenge.
+### Aliases
+
+The following aliases are created for quick access to the environment variables:
+
+- `ip`: Resolves to the `IP` environment variable.
+- `user`: Resolves to the `USER` environment variable.
+- `pass`: Resolves to the `PASSWORD` environment variable.
+- `domain`: Resolves to the `DOMAIN` environment variable.
+- `target`: Resolves to the `TARGET` environment variable.
+
+Example:
+
+```bash
+$ ip
+127.0.0.1
+
+$ target
+target.com
+```
+
+### Functions
+
+The following functions can be used to retrieve the values of the environment variables:
+
+- `getip()`: Returns the value of the `IP` variable.
+- `getuser()`: Returns the value of the `USER` variable.
+- `getpass()`: Returns the value of the `PASSWORD` variable.
+- `getdomain()`: Returns the value of the `DOMAIN` variable.
+- `gettarget()`: Returns the value of the `TARGET` variable.
+
+Example:
+
+```bash
+$ getip
+127.0.0.1
+
+$ gettarget
+target.com
+```
