@@ -1,10 +1,10 @@
 # CTF aliases
 
-export IP=10.129.231.110
-export TARGET=certified.htb
-export USER=judith.mader
-export PASSWORD=judith09
-export DOMAIN=certified.htb
+export IP=127.0.0.1
+export TARGET=target.com
+export USER=username
+export PASSWORD=password
+export DOMAIN=domain.com
 
 # Aliases for environment variables
 alias ip='$IP'
