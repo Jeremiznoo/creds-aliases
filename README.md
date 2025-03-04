@@ -90,21 +90,15 @@ The following aliases are created for quick access to the environment variables:
 
 # Example:
 
-$ echo $IP
-127.0.0.1
-
-$ echo $TARGET
-target.com
-
-#### Now if you want to change the variable:
+## Change the IP and target
 
 $ set_ip 192.168.1.1
-IP updated to 192.168.1.1
+`IP updated to 192.168.1.1`
 
 $ set_target newtarget.com
-TARGET updated to newtarget.com
+`TARGET updated to newtarget.com`
 
-Verify the updated values:
+## Verify the changes
 
 $ echo $IP
 192.168.1.1
@@ -112,37 +106,10 @@ $ echo $IP
 $ echo $TARGET
 newtarget.com
 
-$ echo $IP
-127.0.0.1
+For example, you can run:
 
-$ echo $TARGET
-target.com
-
-#### Now if you want to change the variable:
-
-$ set_ip 192.168.1.1
-IP updated to 192.168.1.1
-
-$ set_target newtarget.com
-TARGET updated to newtarget.com
-
-#### Verify the updated values:
-
-$ echo $IP
-192.168.1.1
-
-$ echo $TARGET
-newtarget.com
-
-#### Now, you can, for example, enumerate your target without needing to remember or type the IP address every time:
-
-**Before**
-$ nmap 192.168.1.1
-
-**After**
-
-$ set_ip 192.168.1.1
-
+```bash
 $ nmap $IP
+$ curl $TARGET
 
-**
+And the changes remain permanent even if you quit or open a new tab
