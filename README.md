@@ -1,4 +1,4 @@
-# CTF Aliases
+# Creds Aliases
 
 This project simplifies managing and accessing environment variables on your Linux system using aliases and functions. It makes changes permanent, so you don't have to repeatedly set variables like IP, target, username etc... 
 Ideal for CTF challenges, it saves time by letting you quickly reference key variables without re-entering them.
