@@ -1,7 +1,7 @@
 # Creds Aliases
 
 This project simplifies managing and accessing environment variables on your Linux system using aliases and functions. It makes changes permanent, so you don't have to repeatedly set variables like IP, target, username etc... 
-Ideal for CTF challenges, it saves time by letting you quickly reference key variables without re-entering them.
+Ideal for pentest mission or CTF challenges, it saves time by letting you quickly reference key variables without re-entering them.
 
 ## Features
 - Set up common environment variables like IP, target, username, password, and domain.
@@ -17,13 +17,13 @@ To get started, clone this repository and set up the aliases on your machine.
 Open your terminal and run the following command to clone the repository:
 
 ```bash
-git clone https://github.com/Jeremiznoo/CTF-aliases/
+git clone https://github.com/Jeremiznoo/creds-aliases/
 ```
 
 ### 2. Navigate into the cloned directory
 
 ```bash
-cd CTF-aliases/
+cd creds-aliases/
 ```
 
 ### 3. Check which shell you're using
@@ -72,7 +72,7 @@ source ~/.zshrc    #
 
 ## Usage
 
-Once the setup is complete, you'll be able to use the predefined aliases and functions to quickly access the environment variables for your CTF challenges.
+Once the setup is complete, you'll be able to use the predefined aliases and functions to quickly access the environment variables for your pentest missions.
 
 ### Environment Variables
 The following environment variables are set up:
